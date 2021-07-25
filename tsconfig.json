@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+        "esModuleInterop": true,
+        "moduleResolution": "Node",
+        "target": "ES3",
+        "outDir": "out/"
+    },
+    "exclude": ["node_modules", "out/", "config.template.ts"],
+    "include": ["typings/", "./src/*.ts", "./config.ts", "src/structures/embeds.ts"]
+}

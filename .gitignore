@@ -1,0 +1,4 @@
+node_modules/
+feedback.json
+config.ts
+out/
