@@ -4,5 +4,9 @@
   },
   "dependencies": {
     "discord.js": "^13.0.0-dev.4886ae2.1627085022"
+  },
+  "scripts": {
+    "build":"tsc --build tsconfig.json",
+    "start": "node out/src/index.js"
   }
 }
