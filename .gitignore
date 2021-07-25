@@ -2,3 +2,4 @@ node_modules/
 feedback.json
 config.ts
 out/
+commands_created.flag
