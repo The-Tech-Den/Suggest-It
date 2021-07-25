@@ -78,7 +78,7 @@ client.on("interactionCreate", (interaction) => {
         let feedbackList:Feedback[] = JSON.parse(readFileSync("./feedback.json").toString());
         if(!feedbackList.find(f => f.id == feedbackID))
             return interaction.reply({"content":"Uh oh, I can't find that feedback ID. Please try again later. If the issue persists, contact the bot developer.", ephemeral:true});
-        if(!feedbackList.find(f => f.id == feedbackID && f.author_id == interaction.member.user.id))
+        if(!feedbackList.find(f => f.id == feedbackID && f.author_id == interaction.member.user.id) && !config.whitelisted.includes(interaction.member.user.id))
             return interaction.reply({"content":"This doesn't appear to be your feedback message. So, the action you just attempted was denied.", ephemeral:true})
         let feedbackPost:Feedback = feedbackList.find(f => f.id == feedbackID && f.author_id == interaction.member.user.id);
         if(interaction.guild.me.permissionsIn(interaction.channelId).has("MANAGE_MESSAGES")){
